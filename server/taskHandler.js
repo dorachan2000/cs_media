@@ -2,7 +2,7 @@ const slackCtrl = require('./slackCtrl');
 const twilioCtrl = require('./twilioCtrl');
 
 
-const tasks = []
+let tasks = []
 const taskHandler = {
   debugGet(req, res) {
     console.log('get')
@@ -19,7 +19,8 @@ const taskHandler = {
     res.send('posted')
   },
   handleGet(req, res){
-    res.send([req.path, JSON.stringify(tasks)])
+    res.send(JSON.stringify(tasks))
+    tasks = []
   },
   handlePost(req, res){
     let task
@@ -32,7 +33,8 @@ const taskHandler = {
         console.log('elevator')
         break;
       case '/say':
-        task = { command: 'elevator', value: 'hello'}
+	console.log('message', req.body.message)
+        task = { command: 'say', value: req.body.message}
         tasks.push(task)
         res.send('say')
         break;
