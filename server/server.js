@@ -10,23 +10,12 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname +'./../'));
 
 port = process.env.PORT || 3000
-app.get('/', taskHandler.handleGet);
-app.post('/', taskHandler.handlePost);
-app.post('/phone', twilioCtrl.handlePost);
+app.get('/', taskHandler.debugGet);
+app.get('/tasks', taskHandler.handleGet);
+app.get('/phone', twilioCtrl.handlePost);
+app.post('/', taskHandler.debugPost);
+app.post('/elevator', taskHandler.handlePost);
+app.post('/say', taskHandler.handlePost);
 app.listen(port) 
-
-// /
-// debug get and post
-
-// /elevator
-// /say
-  // taskHandler
-    // case elevator
-    // add task for slackbot 
-    // send text
-    //  
-    // case say
-    // add task for slackbot 
-// /phone
 
 console.log('server port: ', port)
