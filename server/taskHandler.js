@@ -24,7 +24,6 @@ const taskHandler = {
   },
   handlePost(req, res){
     let task
-    console.log(req.path)
     switch(req.path) {
       case '/elevator':
         task = { command: 'elevator'}
@@ -33,8 +32,7 @@ const taskHandler = {
         console.log('elevator')
         break;
       case '/say':
-	console.log('message', req.body.message)
-        task = { command: 'say', value: req.body.message}
+        task = { command: 'say', message: req.body.text}
         tasks.push(task)
         res.send('say')
         break;
