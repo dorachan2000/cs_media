@@ -1,22 +1,22 @@
 {
-  "name": "slack-test",
+  "name": "cs_media",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dorachan2000/slack-test.git"
+    "url": "git+https://github.com/dorachan2000/cs_media.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dorachan2000/slack-test/issues"
+    "url": "https://github.com/dorachan2000/cs_media/issues"
   },
-  "homepage": "https://github.com/dorachan2000/slack-test#readme",
+  "homepage": "https://github.com/dorachan2000/cs_media#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
