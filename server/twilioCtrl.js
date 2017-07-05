@@ -1,4 +1,4 @@
-const apikey = require('/home/ec2-user/apikey')
+const apikey = require('/home/ec2-user/apikey.js')
 const accountSid = apikey.twilio.sid
 const authToken = apikey.twilio.token
 var twilio = require('twilio');
